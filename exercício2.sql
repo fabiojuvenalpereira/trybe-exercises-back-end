@@ -1,0 +1,4 @@
+SELECT
+  1 AS `NUM1`,
+  2 AS `NUM2`,
+  3 AS `NUM3`;
