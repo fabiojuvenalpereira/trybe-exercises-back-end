@@ -1,0 +1,9 @@
+SELECT
+  JOB_ID,
+  ROUND(AVG(MIN_SALARY), 2) AS `Media`
+FROM
+  jobs
+GROUP BY
+  JOB_ID
+ORDER BY
+  `Media`;
