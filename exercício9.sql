@@ -1,0 +1,11 @@
+SELECT
+  JOB_ID,
+  ROUND(AVG(SALARY), 2) AS `Media`
+FROM
+  employees
+WHERE
+  JOB_ID != 'IT_PROG'
+GROUP BY
+  JOB_ID
+ORDER BY
+  `Media`;
