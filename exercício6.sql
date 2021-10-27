@@ -1,0 +1,6 @@
+SELECT
+  COUNT(JOB_ID)
+FROM
+  employees
+WHERE
+  JOB_ID LIKE 'IT_PROG';
