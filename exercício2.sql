@@ -1,0 +1,4 @@
+SELECT
+  MAX(MAX_SALARY) - MIN(MIN_SALARY) AS `Diferença`
+FROM
+  jobs;
