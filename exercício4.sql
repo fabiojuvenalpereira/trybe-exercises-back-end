@@ -1,0 +1,4 @@
+SELECT
+  SUM(MAX_SALARY)
+FROM
+  jobs;
