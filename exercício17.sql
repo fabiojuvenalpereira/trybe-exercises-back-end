@@ -4,4 +4,5 @@ SELECT
 FROM
   employees
 WHERE
-  YEAR(`HIRE_DATE`) = 1987;
+  MONTH(`HIRE_DATE`) = 7
+  AND YEAR(`HIRE_DATE`) = 1987;
