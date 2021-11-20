@@ -1,5 +1,5 @@
 // use bios;
 
-db.bios.find({
-   _id: 8
-});
+db.bios.find(
+   { _id: 8 }
+);
