@@ -1,4 +1,4 @@
 use('class');
 db.superheroes.find(
-  { "aspects.height": { $gt: 200 } }
+  { "aspects.height": { $gte: 200 } }
 ).limit(1);
