@@ -1,0 +1,29 @@
+{
+  "name": "trybe-exercises-back-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabiojuvenalpereira/trybe-exercises-back-end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fabiojuvenalpereira/trybe-exercises-back-end/issues"
+  },
+  "homepage": "https://github.com/fabiojuvenalpereira/trybe-exercises-back-end#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongodb": "^4.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
