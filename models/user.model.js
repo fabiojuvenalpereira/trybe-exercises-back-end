@@ -1,8 +1,7 @@
 const connection = require('./connection');
 
 const getAllUsersFromDb = async () => {
-  // return connection()
-  //   .then((db) => db.collection('authors').find({}).toArray());
+  // return connection().then((db) => db.collection('authors').find({}).toArray());
   
   const conn = await connection();
   const query = await conn.collection('authors').find({}).toArray();
@@ -11,23 +10,34 @@ const getAllUsersFromDb = async () => {
 };
 
 
-const createUserOnDb = async({firstName, lastName, email, password}) => {
+const createUserOnDb = async ({firstName, lastName, email, password}) => {
   const conn = await connection();
   const { insertedId } = await conn.collection('authors').insertOne({
     firstName, lastName, email, password
   });
   return {
     message: 'user been created',
-    id: insertedId
+    id: insertedId,
+    name: (`${firstName} ${lastName}` ),
+    email,
   };
 }
 
 const findUserOnDb = async (user) => {
   const conn = await connection();
-  const userReturn = await conn.collection('authors').findOne({
-    firstName: { eq: `${user}`}
-  });
+  const userReturn = await conn.collection('authors')
+    .findOne(
+      { firstName: `${user}` }
+    );
+  return userReturn;
+}
 
+const findIdOnDb = async (id) => {
+  const conn = await connection();
+  const userReturn = await conn.collection('authors')
+    .findOne(
+      { _id: `${id}` }
+    );
   return userReturn;
 }
 
@@ -35,5 +45,6 @@ const findUserOnDb = async (user) => {
 module.exports = {
   getAllUsersFromDb,
   createUserOnDb,
-  findUserOnDb
+  findUserOnDb,
+  findIdOnDb,
 };

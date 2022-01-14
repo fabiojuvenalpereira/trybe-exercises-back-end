@@ -1,14 +1,22 @@
-const { nameVerification } = require('../utils/verifications');
+const { 
+  nameVerification,
+  passwordVerification,
+} = require('../utils/verifications');
 
 const verification = (req, res, next) => {
   try {
-    const { firstName, lastName, email, password } = req.body; 
-    const nameTest = nameVerification(firstName);
+    const { firstName, lastName, email, password } = req.body;
+    const nameIsValid = nameVerification(firstName, lastName);
+    const passwordIsValid = passwordVerification(password);
 
-    if (nameTest) return res.status(nameTest.status).json({ message: nameTest.message });
-    
+    if (nameIsValid)
+      return res.status(nameIsValid.status).json({ message: nameIsValid.message });
+
+    if(passwordIsValid)
+      return res.status(passwordIsValid.status).json({message: passwordIsValid.message })
+
     next();
-  } catch (e) {
+  }catch (e) {
     console.log(e.message);
     next(e);
   }
@@ -16,4 +24,4 @@ const verification = (req, res, next) => {
 
 module.exports = {
   verification,
-}
+};
