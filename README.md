@@ -4,7 +4,11 @@
 #### Aqui você irá encontrar todos os exercícios realizados no módulo de Back-End
 
 ##### Quer conhecer mais sobre a TRYBE? Dê uma olhadinha neste link a seguir:
-[![N|trybe](https://uploads-ssl.webflow.com/5fba98ad987231cf0efa3d58/5fba9c9a93a2e77624258d49_Logo.svg)](https://www.betrybe.com/)
+<div >
+  <a href="https://www.betrybe.com/">
+    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Eg8INSNe--/c_fill,f_auto,fl_progressive,h_320,q_auto,w_320/https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/5302/26258239-4ac6-4d28-b94c-ba6d3f9eabc2.png" alt="logo trybe" width="50" /> 
+  </a>
+</div>
 
 ### Todos os exercícios realizados podem ser encontrados nas branches deste repositório.
 Para desenvolver as atividades e aplicações estão sendo utilizadas as seguintes ferramentas:
